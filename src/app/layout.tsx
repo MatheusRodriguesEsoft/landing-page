@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-export const interTight = Inter_Tight({
+const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],
 });

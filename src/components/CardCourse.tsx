@@ -9,37 +9,31 @@ interface CardCourseProps {
 
 export const CardCourse = ({ course }: CardCourseProps) => {
   return (
-    <div
-      className={
-        "w-354.5px h-[469px] m-6 p-4 flex justify-between flex-col rounded-[16px] shadow"
-      }
-    >
+    <div className="w-full p-4 flex flex-col rounded-[16px] shadow-md bg-white dark:bg-primary-base sm:w-full lg:w-[354px] shadow">
       <Image
-        className={"w-[322px] h-[200px] mb-2"}
+        className="w-full h-[200px] object-cover rounded-[16px] lg:w-[322.5px]"
         src={course.image}
         alt={course.title}
         width={500}
         height={500}
       />
-      <div className={"h-123px flex flex-col"}>
-        <span className={"text-2xl font-semibold mb-2"}>{course.title}</span>
-        <span className={"text-[14px] text-descrition-gray"}>
-          {course.author}
-        </span>
-        <span className={"text-[14px] flex my-2"}>
-          <Image src={Timer} alt={"timer"} width={18} height={18} />
+      <div className="flex flex-col mt-4">
+        <span className="text-lg font-semibold dark:text-white">{course.title}</span>
+        <span className="text-sm text-descrition-gray dark:text-white">{course.author}</span>
+        <span className="text-sm flex items-center mt-2">
+          <Image
+            src={Timer}
+            alt="timer"
+            width={18}
+            height={18}
+            className="mr-2"
+          />
           {course.duration}
         </span>
       </div>
-      <div className={"h-66px"}>
-        <span className={"text-[14px] text-descrition-gray"}>
-          {course.discount}
-        </span>
-        <button
-          className={
-            "bg-primary-base w-[322.5px] h-[44px] my-1 px-[24px] py-[10px] rounded-[8px] text-white"
-          }
-        >
+      <div className="mt-4">
+        <span className="text-sm text-descrition-gray">{course.discount}</span>
+        <button className="w-full mt-2 bg-pure-green font-semibold hover:bg-pure-green-hover text-white py-2 rounded-lg cursor-pointer">
           {course.price}
         </button>
       </div>

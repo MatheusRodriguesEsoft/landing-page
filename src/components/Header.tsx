@@ -1,20 +1,27 @@
 import Image from "next/image";
 import { Menu } from "./Menu";
 
-import Logo from "@/../public/icons/logo.svg";
-
 export const Header = () => {
   return (
-    <header
-      className={
-        "w-full max-w-[1440px] flex items-center justify-between h-20 px-8 md:px-16 lg:px-[128px] py-6 mx-auto"
-      }
-    >
-      <div className={"w-full flex h-full items-center justify-between"}>
-        <div className={"w-6/12"}>
-          <Image src={Logo} alt={"Logo"} width={100} height={100} />
+    <header className="w-full h-[110.5px] flex items-center justify-center  bg-primary-base dark:bg-elevated dark:text-white fixed">
+      <div className="w-full max-w-[1440px] flex items-center justify-between px-[20px] py-[40px] md:px-[80px] lg:px-[120px]">
+        <div className="flex items-center h-12">
+          <Image
+            className="w-48 h-auto hidden md:block"
+            src={"/images/logo.png"}
+            alt={"Logo"}
+            width={500}
+            height={500}
+          />
+          <Image
+            className="w-18 h-auto md:hidden"
+            src={"/images/logo-mobile.png"}
+            alt={"Logo Mobile"}
+            width={500}
+            height={500}
+          />
         </div>
-        <div className={"w-[592px] h-12"}>
+        <div className="lg:w-[592px] h-full flex md:w-[480px] items-center justify-end ">
           <Menu />
         </div>
       </div>

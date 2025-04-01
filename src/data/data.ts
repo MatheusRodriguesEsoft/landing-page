@@ -105,31 +105,16 @@ export const socialMedias: SocialMedia[] = [
   {
     label: "Instagram",
     icon: "/icons/instagram.svg",
-    url: "https://www.instagram.com/tian",
-  },
-  {
-    label: "Figma",
-    icon: "/icons/figma.svg",
-    url: "https://www.figma.com/tian",
+    url: "https://www.instagram.com/softtor.ds/",
   },
   {
     label: "Linkedin",
     icon: "/icons/linkedin.svg",
-    url: "https://www.linkedin.com/tian",
+    url: "https://www.linkedin.com/company/softtor/",
   },
   {
-    label: "Twitter",
-    icon: "/icons/twitter.svg",
-    url: "https://www.twitter.com/tian",
-  },
-  {
-    label: "Telegram",
-    icon: "/icons/telegram.svg",
-    url: "https://www.telegram.com/tian",
-  },
-  {
-    label: "Medium",
-    icon: "/icons/medium.svg",
-    url: "https://www.medium.com/tian",
-  },
+    label: "WhatsApp",
+    icon: "/icons/whatsapp.svg",
+    url: "https://api.whatsapp.com/send?phone=5561996105046",
+  }
 ];

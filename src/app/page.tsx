@@ -6,11 +6,11 @@ import { SectionTestimony } from "@/components/SectionTestimony";
 
 export default function Home() {
   return (
-    <main className={"w-full flex flex-col items-center"}>
+    <main className={"bg-white dark:bg-dark-color w-full flex flex-col items-center overflow-x-hidden pt-[110px]"}>
       <SectionHero />
-      <SectionFeatures/>
-      <SectionPopularCourses/>
-      <SectionTestimony/>
+      <SectionFeatures />
+      <SectionPopularCourses />
+      <SectionTestimony />
       <SectionBenefits/>
     </main>
   );

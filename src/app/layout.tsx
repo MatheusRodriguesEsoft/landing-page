@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Chakra_Petch } from "next/font/google";
 
 import "./globals.css";
+import 'animate.css';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "next-themes";

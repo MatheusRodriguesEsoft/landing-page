@@ -23,10 +23,9 @@ export const Menu = () => {
 
   useEffect(() => {
     setTimeout(() => setActiveItem(visibleSectionIndex), 600);
-  }, []);
+  }, [visibleSectionIndex]);
 
   useEffect(() => {
-    console.log(visibleSectionIndex)
     setActiveItem(visibleSectionIndex);
     const handleResize = () => {
       setActiveItem(visibleSectionIndex);

@@ -33,7 +33,7 @@ export const Footer = () => {
     <footer className="w-full h-[661px] flex items-center justify-center bg-primary-base dark:bg-elevated">
       <div className="w-full max-w-[1440px] flex flex-col justify-center lg:flex-row lg:justify-between lg:items-center lg:h-[410px] px-[20px] py-[40px] md:px-[80px] lg:px-[120px]">
         <div className="md:w-[372px] h-[156px] lg:w-[372px] flex flex-col justify-between">
-          <Image className=" w-48 h-auto"  src={"/images/logo.png"} alt="logo" width={500} height={500} />
+          <Image className="w-48 h-auto"  src={"/images/logo.png"} alt="logo" width={500} height={500} />
           <div className="flex gap-4 mt-4">
             {socialMedias.map((socialMedia, idx) => (
               <CardSocialMedia key={idx} socialMedia={socialMedia} />

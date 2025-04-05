@@ -11,6 +11,7 @@ import {
 interface ActionsContextData {
   sectionRefs: RefObject<HTMLElement | null>[];
   visibleSectionIndex: number;
+  scrollY: number;
 }
 
 interface ActionsProviderProps {
@@ -21,11 +22,8 @@ export const ActionsContext = createContext({} as ActionsContextData);
 
 export function ActionsProvider({ children }: ActionsProviderProps) {
   const [visibleSectionIndex, setVisibleSectionIndex] = useState(0);
-  
-  // Lista de seções
+  const [scrollY, setScrollY] = useState(0);
   const sections = ["home", "features", "courses", "benefits"];
-  
-  // Criar refs ANTES do map
   const sectionRefs = [
     useRef<HTMLElement | null>(null),
     useRef<HTMLElement | null>(null),
@@ -51,7 +49,10 @@ export function ActionsProvider({ children }: ActionsProviderProps) {
       }
     };
 
-    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
 
     sectionRefs.forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
@@ -60,8 +61,22 @@ export function ActionsProvider({ children }: ActionsProviderProps) {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <ActionsContext.Provider value={{ sectionRefs, visibleSectionIndex }}>
+    <ActionsContext.Provider
+      value={{ sectionRefs, visibleSectionIndex, scrollY }}
+    >
       {children}
     </ActionsContext.Provider>
   );

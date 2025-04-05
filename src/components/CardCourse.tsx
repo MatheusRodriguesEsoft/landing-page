@@ -9,7 +9,7 @@ interface CardCourseProps {
 
 export const CardCourse = ({ course }: CardCourseProps) => {
   return (
-    <div className="w-full p-4 flex flex-col rounded-[16px] shadow-md bg-white dark:bg-primary-base sm:w-full lg:w-[354px] shadow">
+    <div className="w-full p-4 flex flex-col rounded-[16px] bg-white dark:bg-primary-base sm:w-full lg:w-[354px] shadow">
       <Image
         className="w-full h-[200px] object-cover rounded-[16px] lg:w-[322.5px]"
         src={course.image}

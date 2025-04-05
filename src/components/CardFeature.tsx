@@ -5,9 +5,9 @@ interface CardFeatureProps {
   feature: Feature;
 }
 
-export const CardFeature = ({ feature }: CardFeatureProps) => {
+export const CardFeature = ({ feature}: CardFeatureProps) => {
   return (
-    <div className="w-full h-[166px] bg-black dark:bg-elevated rounded-[10px] flex items-center px-[32px] py-[48px] md:p-8 lg:p-10">
+    <div className="card-feature w-full h-[166px] bg-black dark:bg-elevated rounded-[10px] flex items-center px-[32px] py-[48px] md:p-8 lg:p-10">
       <div className="p-2">
         <Image
           src={feature.icon as string}
